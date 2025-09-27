@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Form</title>
+  <style>
+    body {
+      background-color: #ca79e0;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 25px;
+      max-width: 450px;
+      margin: 60px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #5b2c6f;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    
+    .inline-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .inline-group label {
+      font-weight: normal;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #5b2c6f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #7d3c98;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="reg" action="process.php" method="POST">
+    <div class="form-box">
+      <h2 style="text-align:center;">REGISTER HERE</h2>
+
+      <label>Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required/>
+
+      <label>Contact no:</label>
+      <input type="tel" id="conno" name="conno" placeholder="Enter your contact number" required/>
+
+      <label>Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email ID" required/>
+
+      <label>Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required/>
+
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+</body>
+</html>
